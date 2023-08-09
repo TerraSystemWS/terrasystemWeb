@@ -25,16 +25,18 @@ export default function Example() {
 				<header className="absolute inset-x-0 top-0 z-50">
 					<nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
 						<div className="flex lg:flex-1">
-							<a href="/" className="-m-1.5 p-1.5 flex items-center space-x-4">
-								<Image
-									className="h-14 w-auto"
-									src="https://res.cloudinary.com/coyas/image/upload/v1691545378/terrasystem/terrasystemweb/logo-sembg-black_cnthas.png"
-									alt="Logo"
-									width={50}
-									height={50}
-								/>
-								<span className="ml-auto text-md font-semibold text-black" >TerraSystem</span>
-							</a>
+							<Link href="/" >
+								<a className="-m-1.5 p-1.5 flex items-center space-x-4">
+									<Image
+										className="h-14 w-auto"
+										src="https://res.cloudinary.com/coyas/image/upload/v1691545378/terrasystem/terrasystemweb/logo-sembg-black_cnthas.png"
+										alt="Logo"
+										width={50}
+										height={50}
+									/>
+									<span className="ml-auto text-md font-semibold text-black" >TerraSystem</span>
+								</a>
+							</Link>
 						</div>
 						<div className="flex lg:hidden">
 							<button
