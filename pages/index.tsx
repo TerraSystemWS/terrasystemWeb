@@ -6,10 +6,10 @@ import Head from "next/head";
 import Image from 'next/image'
 
 const navigation = [
-	{ name: 'Serviços', href: '#' },
-	{ name: 'Docs & Posts', href: '#' },
-	{ name: 'Marketplace', href: '#' },
-	{ name: 'Sobre', href: '#' },
+	{ name: 'Serviços', href: '/servicos' },
+	{ name: 'Docs & Posts', href: '/repository' },
+	{ name: 'Marketplace', href: '/marketplace' },
+	{ name: 'Sobre', href: '/sobre' },
 ]
 
 export default function Example() {
@@ -55,25 +55,27 @@ export default function Example() {
 							))}
 						</div>
 						<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-							<a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-								Log in <span aria-hidden="true">&rarr;</span>
-							</a>
+							<Link href="/login">
+								<a className="text-sm font-semibold leading-6 text-gray-900">
+									Log in <span aria-hidden="true">&rarr;</span>
+								</a></Link>
 						</div>
 					</nav>
 					<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
 						<div className="fixed inset-0 z-50" />
 						<div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
 							<div className="flex items-center justify-between">
-								<a href="/" className="-m-1.5 p-1.5">
-									<Image
-										className="h-8 w-auto"
-										src="https://res.cloudinary.com/coyas/image/upload/v1691545378/terrasystem/terrasystemweb/logo-sembg-black_cnthas.png"
-										alt="logo"
-										width={40}
-										height={40}
-									/>
+								<Link href="/">
+									<a className="-m-1.5 p-1.5">
+										<Image
+											className="h-8 w-auto"
+											src="https://res.cloudinary.com/coyas/image/upload/v1691545378/terrasystem/terrasystemweb/logo-sembg-black_cnthas.png"
+											alt="logo"
+											width={40}
+											height={40}
+										/>
 
-								</a>
+									</a></Link>
 								<button
 									type="button"
 									className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -90,7 +92,6 @@ export default function Example() {
 											<Link key={item.name}
 												href={item.href}>
 												<a
-
 													className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
 												>
 													{item.name}
@@ -98,7 +99,7 @@ export default function Example() {
 										))}
 									</div>
 									<div className="py-6">
-										<Link href="#">
+										<Link href="/login">
 											<a
 												className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  hover:bg-gray-50"
 											>
@@ -129,10 +130,11 @@ export default function Example() {
 						<div className="hidden sm:mb-8 sm:flex sm:justify-center">
 							<div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
 								algum publicaçao de blog...{' '}
-								<a href="#" className="font-semibold text-indigo-600">
-									<span className="absolute inset-0" aria-hidden="true" />
-									ver mais <span aria-hidden="true">&rarr;</span>
-								</a>
+								<Link href="/repository/posts/id_do_post">
+									<a className="font-semibold text-indigo-600">
+										<span className="absolute inset-0" aria-hidden="true" />
+										ver mais <span aria-hidden="true">&rarr;</span>
+									</a></Link>
 							</div>
 						</div>
 						<div className="text-center">
@@ -143,15 +145,16 @@ export default function Example() {
 								Fortaleça sua presença digital com produtos, desenvolvimento web e hospedagem confiáveis. Conecte-se conosco e comece sua jornada!
 							</p>
 							<div className="mt-10 flex items-center justify-center gap-x-6">
-								<a
-									href="#"
+								<Link href="/contatos"><a
+
 									className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 								>
 									Começar
-								</a>
-								<a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-									ver mais <span aria-hidden="true">→</span>
-								</a>
+								</a></Link>
+								<Link href="/servicos_extra">
+									<a className="text-sm font-semibold leading-6 text-gray-900">
+										ver mais <span aria-hidden="true">→</span>
+									</a></Link>
 							</div>
 						</div>
 					</div>
