@@ -1,7 +1,7 @@
 
 const Footer = () => {
 	return (
-		<footer className="text-center  p-4 fixed bottom-0 w-full">
+		<footer className="text-center  p-4  bottom-0 w-full">
 		<div className="flex items-center justify-center">
 		  <a
 			href="https://terrasystem.cv"
